@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS cli_compra (
+    `id` VARCHAR(16) CHARACTER SET utf8,
+    `cliente` VARCHAR(12) CHARACTER SET utf8,
+    `im_vel` VARCHAR(9) CHARACTER SET utf8,
+    `Data` DATETIME,
+    `Valor` INT
+);
+INSERT INTO cli_compra VALUES
+    ('cli_compra000001','Paul','imov00001','2018-08-15 00:00:00',15000),
+    ('cli_compra000002','Gaspar Zinho','imov00002','2018-08-16 00:00:00',12000),
+    ('cli_compra000003','Giovanny','imov00003','2018-08-17 00:00:00',35000),
+    ('cli_compra000004','Juvenal','imov00004','2018-08-18 00:00:00',64000),
+    ('cli_compra000005','Giovanny','imov00005','2018-08-19 00:00:00',65000),
+    ('cli_compra000006','Juvenal','imov00006','2018-08-20 00:00:00',251000),
+    ('cli_compra000007','Giovanny','imov00007','2018-08-21 00:00:00',360000),
+    ('cli_compra000008','Juvenal','imov00008','2018-08-22 00:00:00',870000),
+    ('cli_compra000009','Giovanny','imov00009','2018-08-23 00:00:00',98541);
