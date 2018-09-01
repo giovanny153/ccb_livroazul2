@@ -1,13 +1,21 @@
 <?php
-session_start()
-?>
-<?php include_once 'includes/header.inc.php'?>
-<?php include_once 'includes/menu.inc.php'?>  
+session_start();
+
+if(isset($_POST['igreja'])){echo 'igreja: '. $_POST['igreja'];}
+if(isset($_POST['tipoRelatorio'])){echo 'tipoRelatorio: '. $_POST['tipoRelatorio'];}
+if(isset($_POST['igreja'])){echo 'igreja: '. $_POST['igreja'];}
+if(isset($_POST['igreja'])){echo 'igreja: '. $_POST['igreja'];}
+if(isset($_POST['igreja'])){echo 'igreja: '. $_POST['igreja'];}
+if(isset($_POST['igreja'])){echo 'igreja: '. $_POST['igreja'];}
+if(isset($_POST['igreja'])){echo 'igreja: '. $_POST['igreja'];}
+
+include_once 'includes/header.inc.php';
+include_once 'includes/menu.inc.php';?>  
 
 
 <div class="row container">
   <p>&nbsp;</p>
-  <form action="banco_de_dados/cli_create.php" method="post" class="col s12">
+  <form action="cli_cad.php" method="post" class="col s12">
     <fieldset class="formulario" style="padding: 15px">
       <legend><img src="imgs/download.png" alt="(imagem)" width="100"></legend>
       <h5 class="light center">Cadastro de Folha</h5>
@@ -23,7 +31,7 @@ session_start()
 
       <div class="input-field col s12">
         <i class="material-icons prefix">home</i>
-        <select name='conta'>          
+        <select name='igreja'>          
           <option disabled selected></option>
           <option value="22-1163">Tibério</option>
           <option value="22-1232">Central</option>
@@ -32,29 +40,61 @@ session_start()
         <label>Igreja</label>
       </div>
 
-      
+      <div class="input-field col s12">
+        <i class="material-icons prefix">assignment</i>
+        <select name='tipoRelatorio'>          
+          <option disabled selected></option>
+          <option value="MAN">Manutenção</option>
+          <option value="ATA">Ata Trimestral</option>
+          <option value="CH-ELE">Checklist Elétrica</option>
+          <option value="VSEG">Vistoria Segurança</option>
+        </select>
+        <label>Tipo Relatório</label>
+      </div>
 
-    <!-- CAMPO E-MAIL -->  
       <div class ="input-field col s12">
         <i class="material-icons prefix">date_range</i>
         <input type="date" name="data" id="data" maxlength="40" >
         <label for ="data">Data da Entrega</label>
       </div>
 
-    <!-- CAMPO E-MAIL -->  
-      <div class ="input-field col s12">
-        <i class="material-icons prefix">email</i>
-        <input type="email" name="email" id="email" maxlength="40" >
-        <label for ="email">E-mail</label>
+      <div class="input-field col s12">
+        <i class="material-icons prefix">person</i>
+        <select name='conta'>          
+          <option disabled selected></option>
+          <option value="22-1163">Cícero</option>
+          <option value="22-1232">Giovanny</option>
+          <option value="22-1243">Rafael</option>
+          <option value="22-1243">Edgar</option>
+        </select>
+        <label>Destacado por:</label>
       </div>
 
-      <!-- CAMPO TELEFONE -->  
       <div class ="input-field col s12">
-        <i class="material-icons prefix">phone</i>
-        <input type="tel" name="telefone" id="telefone" maxlength="40" >
-        <label for ="telefone">Telefone/Celular</label>
+        <i class="material-icons prefix">announcement</i>
+        <input type="text" name="obs" id="obs" maxlength="400" >
+        <label for ="obs">Observações</label>
       </div>
 
+      
+
+
+      <div class ="input-field col s6">
+       <label>
+        <input type="checkbox"  />
+        <span>Assinatura OK?</span>
+      </label>
+       </div>
+
+       <div class ="input-field col s6">
+       <label>
+        <input type="checkbox"  />
+        <span>Preenchimento OK?</span>
+      </label>
+       </div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
       <!-- BOTÕES -->
       <div class="input-field col s12">
         <input type="submit" value="Cadastrar" class="btn blue">

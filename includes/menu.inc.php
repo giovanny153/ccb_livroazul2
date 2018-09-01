@@ -2,7 +2,7 @@
       
       <nav class="blue-grey">
         <div class = "nav-wrapper container">
-          <div class ="brand-logo light"> Cad Cli</div>
+          <div class ="brand-logo light">Sistema do Livro Azul</div>
           <ul class="right">            
             
             <li><a class="dropdown-trigger btn waves-effect" data-target="dropdown3"><i class="material-icons">add_to_photos</i></a></li>
