@@ -34,6 +34,6 @@
 
 <ul id="dropdown3" class="dropdown-content">
   <li><a href="cli_cad.php">Folha Amarela</li></a>
-  <!-- <li><a href="fin_cad.php">Fin</a></li> -->
+  <li><a href="cli_consultas.php">Consultar</a></li>
   <!-- <li><a href="#!">Imóvel</a></li> -->
 </ul>

@@ -17,7 +17,7 @@ $destacador   		= filter_input(INPUT_POST, 'destacador');
 $obs    			= filter_input(INPUT_POST, 'obs');
 $assinatura     	= filter_input(INPUT_POST, 'assinatura');
 $preenchimento     	= filter_input(INPUT_POST, 'preenchimento');
-$tb = "ccb_movimentacao";
+// $tb = "ccb_movimentacao";
 $query = "insert into $tb values 
 								(default,
 								'$igreja',

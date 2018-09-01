@@ -1,23 +1,32 @@
 <?php 
 
 include_once 'conexao.php';
+$id = null;
+$querySelect = $link->query("select * from $tb");
+echo $tb;
 
-$querySelect = $link->query("select * from tb_clientes");
+
 
 while($registros = $querySelect->fetch_assoc()):
-	$id = $registros['id'];
-	$nome = $registros['nome'];
-	$email  =$registros['email'];
-	$telefone  =$registros['telefone'];
-	// $cpf  =$registros['cpf'];
-	$timestamp  =$registros['DATA'];
+
+	$igreja     		= $registros['igreja'];
+	$tipoRelatorio     	= $registros['tipoRelatorio'];
+	$data    		 	= $registros['data'];
+	$destacador   		= $registros['destacador'];
+	$obs    			= $registros['obs'];
+	$assinatura     	= $registros['assinatura'];
+	$preenchimento     	= $registros['preenchimento'];
+	
 
 	echo "<tr>";
 	echo "
-	<td>$nome</td>
-	<td>$email</td>
-	<td>$telefone</td>
-	<td>$timestamp</td>
+	<td>$igreja</td>
+	<td>$tipoRelatorio</td>
+	<td>$data</td>
+	<td>$destacador</td>
+	<td>$obs</td>
+	<td>$assinatura</td>
+	<td>$preenchimento</td>
 	<td>
 		<a href='editar.php?id=$id'>
 		<i class='material-icons'>edit</i>
