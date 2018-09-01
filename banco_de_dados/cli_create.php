@@ -2,32 +2,50 @@
 session_start();
 include_once 'conexao.php';
 
-// filter_input = para não usar a super gloval _POST usar para evitar comentar código no formulario
-// INPUT POST = conseguir usar o metodo post para pegar a variável
-// FILTER_SANITIZE_SPECIAL_CHARS = interpretar special char como char
-$nome     = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
-$email    = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
-$telefone = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_NUMBER_INT);
+// igreja
+// tipoRelatorio
+// data
+// destacador
+// obs
+// assinatura
+// preenchimento
 
-// validar se email já está cadastrado
-$querySelect = $link->query("select email from tb_clientes");
-$array_emails=[];
+$igreja     		= filter_input(INPUT_POST, 'igreja');
+$tipoRelatorio     	= filter_input(INPUT_POST, 'tipoRelatorio');
+$data    		 	= filter_input(INPUT_POST, 'data');
+$destacador   		= filter_input(INPUT_POST, 'destacador');
+$obs    			= filter_input(INPUT_POST, 'obs');
+$assinatura     	= filter_input(INPUT_POST, 'assinatura');
+$preenchimento     	= filter_input(INPUT_POST, 'preenchimento');
+$tb = "ccb_movimentacao";
+$query = "insert into $tb values 
+								(default,
+								'$igreja',
+								'$tipoRelatorio',
+								'$data', 
+								'$destacador',  
+								'$obs',    	
+								'$assinatura',   
+								'$preenchimento',
+								default)";
 
-while($emails = $querySelect->fetch_assoc()):
-	$emails_existentes = $emails['email'];
-	array_push($array_emails,$emails_existentes);
-endwhile;
+echo "igreja: ".$igreja . '<br />';
+echo "tipo:".$tipoRelatorio . '<br />';
+echo "data: ".$data . '<br />'   	;	 
+echo "destacador: ".$destacador  . '<br />' ;
+echo "obs: ".$obs    . '<br />'		;
+echo "assinatura: ".$assinatura   . '<br />';
+echo "preenchimento: ".$preenchimento . '<br />';
+echo "tabela: ".$tb . '<br />';
+echo "query: ".$query . '<br />';
 
-// Mensagem de erro caso houver email repetido
-if(in_array($email, $array_emails)):
-	$_SESSION['msg'] = "<p class='center red-text'>".'Já existe um cliente cadastrado com esse email'."</p>";
-	header ("Location:../cli_cad.php");
-else:
-	$queryInsert = $link->query("insert into tb_clientes values (default,'$nome','$email','$telefone', default)");
-	$affected_rows = mysqli_affected_rows($link);
 
-	if($affected_rows > 0):
+
+$queryInsert = $link->query($query);
+$affected_rows = mysqli_affected_rows($link);
+
+	if($affected_rows > 0){
 		$_SESSION ['msg'] ="<p class='center green-text'>".'Cadastro efetuado com sucesso!'."<br>";
+		echo "<hr>sucesso!!!";}else {echo "<hr>deu ruim!";}
 		header ("Location:../cli_cad.php");
-	endif;
-endif;
+	

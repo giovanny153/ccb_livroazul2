@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-if(isset($_POST['igreja'])){echo 'igreja: '. $_POST['igreja'];}
-if(isset($_POST['tipoRelatorio'])){echo 'tipoRelatorio: '. $_POST['tipoRelatorio'];}
-if(isset($_POST['igreja'])){echo 'igreja: '. $_POST['igreja'];}
-if(isset($_POST['igreja'])){echo 'igreja: '. $_POST['igreja'];}
-if(isset($_POST['igreja'])){echo 'igreja: '. $_POST['igreja'];}
-if(isset($_POST['igreja'])){echo 'igreja: '. $_POST['igreja'];}
-if(isset($_POST['igreja'])){echo 'igreja: '. $_POST['igreja'];}
+if(isset($_POST['igreja'])){echo 'igreja: '. $_POST['igreja'].'<BR/>';}
+if(isset($_POST['tipoRelatorio'])){echo 'tipoRelatorio: '. $_POST['tipoRelatorio'].'<BR/>';}
+if(isset($_POST['data'])){echo 'data: '. $_POST['data'].'<BR/>';}
+if(isset($_POST['destacador'])){echo 'destacador: '. $_POST['destacador'].'<BR/>';}
+if(isset($_POST['obs'])){echo 'obs: '. $_POST['obs'].'<BR/>';}
+if(isset($_POST['assinatura'])){echo 'assinatura: '. $_POST['assinatura'].'<BR/>';}
+if(isset($_POST['preenchimento'])){echo 'preenchimento: '. $_POST['preenchimento'].'<BR/>';}
 
 include_once 'includes/header.inc.php';
 include_once 'includes/menu.inc.php';?>  
@@ -15,7 +15,7 @@ include_once 'includes/menu.inc.php';?>
 
 <div class="row container">
   <p>&nbsp;</p>
-  <form action="cli_cad.php" method="post" class="col s12">
+  <form action="banco_de_dados/cli_create.php" method="post" class="col s12">
     <fieldset class="formulario" style="padding: 15px">
       <legend><img src="imgs/download.png" alt="(imagem)" width="100"></legend>
       <h5 class="light center">Cadastro de Folha</h5>
@@ -60,12 +60,12 @@ include_once 'includes/menu.inc.php';?>
 
       <div class="input-field col s12">
         <i class="material-icons prefix">person</i>
-        <select name='conta'>          
+        <select name='destacador'>          
           <option disabled selected></option>
-          <option value="22-1163">Cícero</option>
-          <option value="22-1232">Giovanny</option>
-          <option value="22-1243">Rafael</option>
-          <option value="22-1243">Edgar</option>
+          <option value="cicero">Cícero</option>
+          <option value="giovanny">Giovanny</option>
+          <option value="rafael">Rafael</option>
+          <option value="edgar">Edgar</option>
         </select>
         <label>Destacado por:</label>
       </div>
@@ -81,14 +81,14 @@ include_once 'includes/menu.inc.php';?>
 
       <div class ="input-field col s6">
        <label>
-        <input type="checkbox"  />
+        <input type="checkbox" name="assinatura"  />
         <span>Assinatura OK?</span>
       </label>
        </div>
 
        <div class ="input-field col s6">
        <label>
-        <input type="checkbox"  />
+        <input type="checkbox" name="preenchimento" />
         <span>Preenchimento OK?</span>
       </label>
        </div>

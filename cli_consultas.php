@@ -4,24 +4,27 @@
 	<div class="col s12">
 		<h5 class="light">Consultas</h5><hr>
 
-<!-- INIÍCIO DO CAMPO DE BUSCA -->	
 
-		<!-- <p><form action="<?php?>">
-			<div class ="input-field col s12">
-		        <i class="material-icons prefix">search</i>		        
-			        <input type="text" name="parametro" id="busca"/><label for ="busca">Busca</label>
-			        <input type="submit" value="Buscar" class="btn blue">
-	      	</div></form>
-		</p> -->
+
+igreja
+tipoRelatorio
+data
+destacador
+obs
+assinatura
+preenchimento
 		
 <!-- INÍCIO DA TABELA COM OS RESULTADOS -->
 		<table class="striped" id="busca">
 			<thead>
 				<tr>
-					<th>Nome</th>
-					<th>Email</th>
-					<th>Telefone</th>
-					<th>Última Alteração</th>
+					<th>Igreja</th>
+					<th>Código Relatório</th>
+					<th>Data Entrega</th>
+					<th>Destacador</th>
+					<th>Observação</th>
+					<th>Assinatura</th>
+					<th>Preenchimento</th>
 				</tr>
 			</thead>
 			<tbody>
