@@ -33,9 +33,45 @@ include_once 'includes/menu.inc.php';?>
         <i class="material-icons prefix">home</i>
         <select name='igreja'>          
           <option disabled selected></option>
-          <option value="22-1163">Tibério</option>
-          <option value="22-1232">Central</option>
-          <option value="22-1243">Greenville</option>
+          <option value="22-1161">Almoxarifado - Vila Carvalho</option>
+          <option value="22-2384">Alto do Sumarezinho</option>
+          <option value="22-4347">Assentamento Indio Galdino</option>
+          <option value="22-4561">Assentamento Mário Lago</option>
+          <option value="22-0206">Bonfim Paulista</option>
+          <option value="22-1161">Campos Elíseos - Nave/Administração</option>
+          <option value="22-1161">Campos Elísios - Salões Regionais</option>
+          <option value="22-4512">Recanto das Flores</option>
+          <option value="22-1913">Dom Mielle</option>
+          <option value="22-1826">Doutor Avelino Alves Palma</option>
+          <option value="22-2977">Geraldo Correa de Carvalho</option>
+          <option value="22-0546">Guatapará - Centro</option>
+          <option value="22-4162">Guatapará - Dist. De Mombuca</option>
+          <option value="22-1162">Ipiranga</option>
+          <option value="22-3457">Jardim Aeroporto - Hípica</option>
+          <option value="22-3315">Jardim Alexandre Balbo II</option>
+          <option value="22-1990">Jardim Bela Vista</option>
+          <option value="22-4729">Jardim Iara - Jockey Club</option>
+          <option value="22-4069">Jardim Nova Aliança</option>
+          <option value="22-4483">Jardim Paiva I</option>
+          <option value="22-2761">Jardim Salgado Filho II</option>
+          <option value="22-9998">Jd. Novo Mundo</option>
+          <option value="22-4068">Parque Avelino</option>
+          <option value="22-4730">Parque dos Servidores</option>
+          <option value="22-4334">Parque Flamboyans</option>
+          <option value="22-3932">Parque Cândido Portinari</option>
+          <option value="22-2813">Parque Ribeirão Preto I</option>
+          <option value="22-3878">Parque Ribeirão Preto II</option>
+          <option value="22-3314">Parque São Sebastião</option>
+          <option value="22-4249">Residencial Green Ville</option>
+          <option value="22-3512">Ribeirão Verde</option>
+          <option value="22-1165">Santa Cruz do José Jaques</option>
+          <option value="22-1825">Vila Abranches</option>
+          <option value="22-1582">Vila Albertina</option>
+          <option value="22-1166">Vila Carvalho</option>
+          <option value="22-1163">Vila Tibério</option>
+          <option value="22-1164">Vila Virgínia</option>
+
+
         </select>
         <label>Igreja</label>
       </div>
@@ -62,10 +98,10 @@ include_once 'includes/menu.inc.php';?>
         <i class="material-icons prefix">person</i>
         <select name='destacador'>          
           <option disabled selected></option>
-          <option value="cicero">Cícero</option>
-          <option value="giovanny">Giovanny</option>
-          <option value="rafael">Rafael</option>
-          <option value="edgar">Edgar</option>
+          <option value="Cícero">Cícero</option>
+          <option value="Giovanny">Giovanny</option>
+          <option value="Rafael">Rafael</option>
+          <option value="Edgar">Edgar</option>
         </select>
         <label>Destacado por:</label>
       </div>

@@ -5,14 +5,6 @@
 		<h5 class="light">Consultas</h5><hr>
 
 
-
-igreja
-tipoRelatorio
-data
-destacador
-obs
-assinatura
-preenchimento
 		
 <!-- INÍCIO DA TABELA COM OS RESULTADOS -->
 		<table class="striped" id="busca">

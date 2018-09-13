@@ -3,7 +3,7 @@
 include_once 'conexao.php';
 $id = null;
 $querySelect = $link->query("select * from $tb");
-echo $tb;
+
 
 
 
